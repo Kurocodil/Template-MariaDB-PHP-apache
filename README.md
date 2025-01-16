@@ -27,7 +27,7 @@ public/
 docker-compose.yml
 README.md
 ```
-### .1 Clone the project 
+### Clone the project 
 ```git clone https://github.com/Kurocodil/Template-MariaDB-PHP-apache.git```
 ## Prerequisites
 - PHP
