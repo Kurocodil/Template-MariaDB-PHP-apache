@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données
-$dsn = 'mysql:host=mariadb;dbname=project_db;charset=utf8';
+$dsn = 'mysql:host=mariadb;dbname=templateDB_apache;charset=utf8';
 $username = 'user';
 $password = 'userpassword';
 
@@ -12,7 +12,7 @@ try {
 }
 
 // Récupération des données
-$stmt = $pdo->query('SELECT users.username, users.email, users.password, users_infos.age, users_infos.gender, users_infos.bio, FROM users JOIN
+$stmt = $pdo->query('SELECT users.username, users_infos.bio FROM users JOIN
 users_infos ON users.id = users_infos.user_id');
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -31,12 +31,10 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div>
             <?php foreach ($users as $user): ?>
                 <div>
-                    <strong>Username :</strong> <?= htmlspecialchars(string: $user['username'])?> <br>
-                    <strong>Age :</strong> <?= htmlspecialchars(string: $user['age'])?> <br>
-                    <strong>Genre :</strong> <?= htmlspecialchars(string: $user['gender'])?> <br>
-                    <strong>Bio :</strong> <?= htmlspecialchars(string: $user['bio'])?> <br>
-                    <strong>Email :</strong> <?= htmlspecialchars(string: $user['email'])?> <br>
-                    <strong>Mot de passe :</strong> <?= htmlspecialchars(string: $user['password'])?>
+                    <p>
+                        <strong>Username :</strong> <?= htmlspecialchars(string: $user['username'])?> <br>
+                        <strong>Bio :</strong> <?= htmlspecialchars(string: $user['bio'])?> <br>
+                    </p>
                 </div>
             <?php endforeach; ?>
         </div>
