@@ -1,11 +1,11 @@
-CREATE TABLE users(
+CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(30) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE users_infos(
+CREATE TABLE users_infos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     age INT NOT NULL,

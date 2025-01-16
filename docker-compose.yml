@@ -3,7 +3,8 @@ services:
     # Partie PHP
     php:
         build:
-            context: ./config/php
+            context: .
+            dockerfile: ./config/php/Dockerfile
         volumes:
             - ./src:/var/www/html
             - ./config/php/000-default.conf:/etc/apache2/sites-available/000-default.conf
@@ -15,10 +16,10 @@ services:
     mariadb:
         image: mariadb:latest
         environment:
-            MYSQL_ROOT_PASSWORD:
-            MYSQL_DATABASE:
-            MYSQL_USER:
-            MYSQL_PASSWORD:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: Template_DB_apache
+            MYSQL_USER: user
+            MYSQL_PASSWORD: userpassword
         volumes:
         - ./config/mariadb/init.sql:/docker-entrypoint-initdb.d/init.sql
         ports:
