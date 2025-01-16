@@ -29,7 +29,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h2>Liste des utilisateurs</h2>
         <h2>Liste des utilisateurs</h2>
         <div>
-            <?php foreach ($user as $user): ?>
+            <?php foreach ($users as $user): ?>
                 <div>
                     <strong>Username :</strong> <?= htmlspecialchars(string: $user['username'])?> <br>
                     <strong>Age :</strong> <?= htmlspecialchars(string: $user['age'])?> <br>
