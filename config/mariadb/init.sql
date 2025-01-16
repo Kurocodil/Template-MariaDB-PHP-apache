@@ -10,7 +10,7 @@ CREATE TABLE users_infos(
     user_id INT NOT NULL,
     age INT NOT NULL,
     gender VARCHAR(10) NOT NULL,
-    gender VARCHAR(255) NOT NULL,
+    bio VARCHAR(255) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
