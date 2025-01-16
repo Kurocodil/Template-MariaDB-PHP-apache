@@ -12,7 +12,7 @@ try {
 }
 
 // Récupération des données
-$stmt = $pdo->query('SELECT users.username, users_infos.bio FROM users JOIN
+$stmt = $pdo->query('SELECT users.username, users.email, users.password, users_infos.age, users_infos.gender, users_infos.bio, FROM users JOIN
 users_infos ON users.id = users_infos.user_id');
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
