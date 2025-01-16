@@ -2,7 +2,7 @@
 // Connexion à la base de données
 $dsn = 'mysql:host=mariadb;dbname=project_db;charset=utf8';
 $username = 'user';
-$password = 'password';
+$password = 'userpassword';
 
 try {
     $pdo = new PDO($dsn, $username, $password);
