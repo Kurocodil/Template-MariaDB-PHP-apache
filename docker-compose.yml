@@ -17,7 +17,7 @@ services:
         image: mariadb:latest
         environment:
             MYSQL_ROOT_PASSWORD: password
-            MYSQL_DATABASE: Template_DB_apache
+            MYSQL_DATABASE: templateDB_apache
             MYSQL_USER: user
             MYSQL_PASSWORD: userpassword
         volumes:
