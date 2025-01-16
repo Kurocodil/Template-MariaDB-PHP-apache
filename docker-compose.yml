@@ -1,0 +1,30 @@
+# Liste des services utilisé
+services:
+    # Partie PHP
+    php:
+        build:
+            context: ./php
+        volumes:
+            - ./src:/var/www/html
+            - ./php/000-default.conf:/etc/apache2/sites-available/000-default.conf
+        ports:
+            - "7060:80"
+        networks:
+            - webnet
+    # Partie MariaDB
+    mariadb:
+        image: mariadb:latest
+        environment:
+            MYSQL_ROOT_PASSWORD:
+            MYSQL_DATABASE:
+            MYSQL_USER:
+            MYSQL_PASSWORD:
+        volumes:
+        - ./mariadb/init.sql:/docker-entrypoint-initdb.d/init.sql
+        ports:
+        - "7000:3306"
+        networks:
+# Configuration networks
+networks:
+    webnet:
+        driver: bridge
