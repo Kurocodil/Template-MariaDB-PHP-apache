@@ -36,6 +36,7 @@ README.md
 ## Commands to use
 ### basics
 #### **prefix :** ``` docker-compose ```
+- build : ``` up --build ```
 - Launch services :``` up -d ```
 - Check containers statut :``` ps ```
 - Stop services :``` down ```
