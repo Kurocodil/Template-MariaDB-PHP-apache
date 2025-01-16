@@ -51,3 +51,4 @@ README.md
 2. VSCODE : install Docker extension from Microsoft
 3. Clone the project
 4. Launch services
+5. Connect to localhost:7070/

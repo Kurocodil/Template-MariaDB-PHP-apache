@@ -8,7 +8,7 @@ services:
             - ./src:/var/www/html
             - ./config/php/000-default.conf:/etc/apache2/sites-available/000-default.conf
         ports:
-            - "7060:80"
+            - "7070:80"
         networks:
             - webnet
     # Partie MariaDB
