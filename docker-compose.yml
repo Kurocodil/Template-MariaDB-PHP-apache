@@ -3,7 +3,7 @@ services:
     # Partie PHP
     php:
         build:
-            context: ./php
+            context: ./config/php
         volumes:
             - ./src:/var/www/html
             - ./config/php/000-default.conf:/etc/apache2/sites-available/000-default.conf
