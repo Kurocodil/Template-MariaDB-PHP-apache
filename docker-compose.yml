@@ -24,6 +24,7 @@ services:
         ports:
         - "7000:3306"
         networks:
+            - webnet
 # Configuration networks
 networks:
     webnet:
